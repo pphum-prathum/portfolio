@@ -499,9 +499,9 @@ h2 {
 
 /* ── PROJECT CARDS ── */
 .projects-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .proj-card {
@@ -1200,3 +1200,8 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
