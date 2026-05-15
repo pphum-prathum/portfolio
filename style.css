@@ -497,6 +497,23 @@ h2 {
     font-weight: 600
 }
 
+#activity .exp-timeline {
+  padding-top: 0;
+  padding-left: 200px; /* keep date column aligned */
+}
+
+#activity .exp-timeline::before {
+  display: none;
+}
+
+#activity {
+  margin-top: 0;
+}
+
+#activity .exp-entry::before {
+  display: none;
+}
+
 /* ── PROJECT CARDS ── */
 .projects-grid {
   display: grid;

@@ -17,6 +17,7 @@
       <ul class="nav-links">
         <li><a href="#summary">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#activity">Activity</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
@@ -27,7 +28,7 @@
   <div class="container">
     <section class="hero" id="about">
       <div class="hero-text">
-        <div class="hero-tag">Open to full-stack &amp; backend roles &mdash; Bangkok &amp; remote</div>
+        <div class="hero-tag">Available now  &mdash; full-stack &amp; backend roles in Bangkok &amp; remote</div>
         <h1>Hi!, I'm <span>Phanphum Prathumsuwan</span><br>Full-Stack Software Engineer</h1>
         <p class="hero-sub">Full-stack developer and research intern experienced in Flutter, Spring Boot, REST APIs,
           PostgreSQL, testing, and AI system evaluation. I build practical software that connects clean interfaces with
@@ -55,10 +56,9 @@
           <img src="assets/profile.jpg" alt="Phanphum Prathumsuwan" class="about-photo">
         </div>
         <div class="about-bio-col">
-          <p><strong>I am a final-year Software Engineering student focused on full-stack development, backend APIs,
-              system integration, and testing.</strong> My work combines Flutter frontends, Spring Boot services,
-            relational databases, CI workflows, and AI evaluation projects. I enjoy building practical systems that are
-            easy to use, reliable, and maintainable.</p>
+          <p>I am a final-year Software Engineering student graduating May 2026, focused on full-stack development, backend APIs, system integration, and testing. 
+            My work combines Flutter frontends, Spring Boot services, relational databases, CI workflows, and AI evaluation projects — including building a benchmarking framework to assess reliability and failure behavior across 7 LLMs during a research internship at Tohoku University. 
+            I enjoy building practical systems that are easy to use, reliable, and maintainable.</p>
         </div>
         <div class="about-lang-col">
           <div class="lang-card">
@@ -175,7 +175,13 @@
           </div>
         </div>
 
-        <!-- Entry 4 -->
+      </div><!-- /exp-timeline -->
+    </section>
+
+    <section id="activity">
+      <p class="section-label">What I've joined</p>
+      <h2>Activity</h2>
+      <div class="exp-timeline">
         <div class="exp-entry">
           <div class="exp-date-col">
             <div class="exp-date-year">2024</div>
@@ -192,12 +198,10 @@
               <li>Built an AI-based solution for healthcare service challenges in a cross-functional team</li>
               <li>Managed data preparation and model integration across the pipeline</li>
             </ul>
-            <div class="tags"><span class="tag">AI</span><span class="tag">Healthcare</span><span class="tag">Data
-                Cleaning</span></div>
+            <div class="tags"><span class="tag">AI</span><span class="tag">Healthcare</span><span class="tag">Data Cleaning</span></div>
           </div>
         </div>
-
-      </div><!-- /exp-timeline -->
+      </div>
     </section>
 
     <section id="projects">
@@ -276,11 +280,10 @@
         <div class="proj-card">
           <div class="proj-media doc-media" style="background:linear-gradient(135deg,#0a1f0a,#1a3a1a)">
             <div class="proj-placeholder">
-              <div class="big-icon">🧪</div>
+              <div class="big-icon"></div>
               <div class="p-title">JavaFlame Test Suites</div>
               <div class="p-sub">Coverage-based testing on an open-source Java debugging tool</div>
-              <a href="https://github.com/beothorn/javaflame" target="_blank" rel="noopener noreferrer"
-                class="p-btn">View original repo ↗</a>
+              <div class="p-badge">10 test suites · 2 owned</div>
             </div>
           </div>
           <div class="proj-body">
@@ -291,6 +294,13 @@
                   <div class="proj-name">JavaFlame Test Suites</div>
                   <div class="proj-type">Testing · JUnit · Group project (2 suites owned)</div>
                 </div>
+              </div>
+              <div class="proj-links">
+            
+                <a href="https://github.com/pphum-prathum/javaflame-tests" class="proj-link pl-github" target="_blank"
+                  rel="noopener noreferrer">GitHub ↗</a>
+                <a href="https://github.com/beothorn/javaflame" class="proj-link pl-github" target="_blank"
+                  rel="noopener noreferrer">View original repo ↗</a>
               </div>
             </div>
             <p class="proj-desc">Extended an open-source Java flame graph debugger (92 ⭐) with 10 new test suites using
@@ -322,8 +332,8 @@
                 <div class="slide"><img src="assets/poliz4.png" alt="GoodPoliz Screen 4"></div>
                 <div class="slide"><img src="assets/poliz5.png" alt="GoodPoliz Screen 5"></div>
                 <div class="slide"><img src="assets/poliz6.png" alt="GoodPoliz Screen 6"></div>
-                <div class="slide"><img src="assets/poliz8.png" alt="GoodPoliz Screen 7"></div>
-                <div class="slide"><img src="assets/poliz7.png" alt="GoodPoliz Screen 8"></div>
+                <div class="slide"><img src="assets/poliz7.png" alt="GoodPoliz Screen 7"></div>
+                <div class="slide"><img src="assets/poliz8.png" alt="GoodPoliz Screen 8"></div>
               </div>
             </div>
             <button class="media-nav media-prev" id="prev-poliz" onclick="slideDir('poliz',-1)"
@@ -371,14 +381,25 @@
 
         <!-- GEMINI TELESCOPE -->
         <div class="proj-card">
-          <div class="proj-media doc-media" style="background:linear-gradient(135deg,#0a1a2e,#0A3323)">
-            <div class="proj-placeholder">
-              <div class="big-icon">🔭</div>
-              <div class="p-title">Gemini Telescope Control</div>
-              <div class="p-sub">Web-based REST bridge for legacy Observatory Control System</div>
-              <div class="p-badge">🔒 Private repository</div>
+          <div class="proj-media app-media" id="media-gemini" style="display:flex;flex-direction:column">
+            <div class="slides-outer">
+              <div class="slides-track" id="track-gemini">
+                <div class="slide"><img src="assets/gemini1.png" alt="Gemini Telescope Screen 1"></div>
+                <div class="slide"><img src="assets/gemini2.png" alt="Gemini Telescope Screen 2"></div>
+                <div class="slide"><img src="assets/gemini3.png" alt="Gemini Telescope Screen 3"></div>
+              </div>
+            </div>
+            <button class="media-nav media-prev" id="prev-gemini" onclick="slideDir('gemini',-1)"
+              aria-label="Previous Gemini Telescope image">&#8249;</button>
+            <button class="media-nav media-next" id="next-gemini" onclick="slideDir('gemini',1)"
+              aria-label="Next Gemini Telescope image">&#8250;</button>
+            <div class="media-dots" id="dots-gemini">
+              <button class="dot active" onclick="goTo('gemini',0)" aria-label="Show Gemini Telescope image 1"></button>
+              <button class="dot" onclick="goTo('gemini',1)" aria-label="Show Gemini Telescope image 2"></button>
+              <button class="dot" onclick="goTo('gemini',2)" aria-label="Show Gemini Telescope image 3"></button>
             </div>
           </div>
+
           <div class="proj-body">
             <div class="proj-header">
               <div style="display:flex;align-items:center;gap:10px">
@@ -500,22 +521,6 @@
         <div class="cert-card">
           <div class="cert-badge"></div>
           <div class="cert-body">
-            <div class="cert-name">SAP Professional Fundamentals</div>
-            <div class="cert-issuer">SAP</div>
-            <div class="cert-meta">
-              <span class="cert-date">May 2026</span>
-            </div>
-            <a href="https://coursera.org/share/24f2d873a9547e1816d31d70a9e3e43e" class="cert-link" target="_blank"
-              rel="noopener noreferrer">View credential ↗</a>
-            <div class="tags" style="margin-top:.5rem">
-              <span class="tag">ERP</span><span class="tag">Project Management</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-badge"></div>
-          <div class="cert-body">
             <div class="cert-name">Using Python to Interact with the Operating System</div>
             <div class="cert-issuer">Google</div>
             <div class="cert-meta">
@@ -541,6 +546,86 @@
               rel="noopener noreferrer">View credential ↗</a>
             <div class="tags" style="margin-top:.5rem">
               <span class="tag">R (Programming)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge"></div>
+          <div class="cert-body">
+            <div class="cert-name">Simulink Onramp</div>
+            <div class="cert-issuer">MathWorks</div>
+            <div class="cert-meta">
+              <span class="cert-date">June 2024</span>
+            </div>
+            <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=31059657-373f-4d63-9e48-d94d02b5e107&" class="cert-link" target="_blank"
+              rel="noopener noreferrer">View credential ↗</a>
+            <div class="tags" style="margin-top:.5rem">
+              <span class="tag">Simulink</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge"></div>
+          <div class="cert-body">
+            <div class="cert-name">MATLAB Onramp</div>
+            <div class="cert-issuer">MathWorks</div>
+            <div class="cert-meta">
+              <span class="cert-date">January 2024</span>
+            </div>
+            <a href="assets/MATLAB_Onramp.pdf" class="cert-link" target="_blank"
+              rel="noopener noreferrer">View credential ↗</a>
+            <div class="tags" style="margin-top:.5rem">
+              <span class="tag">MATLAB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge"></div>
+          <div class="cert-body">
+            <div class="cert-name">Image Processing Onramp</div>
+            <div class="cert-issuer">MathWorks</div>
+            <div class="cert-meta">
+              <span class="cert-date">January 2024</span>
+            </div>
+            <a href="assets/Image_Processing_Onramp.pdf" class="cert-link" target="_blank"
+              rel="noopener noreferrer">View credential ↗</a>
+            <div class="tags" style="margin-top:.5rem">
+              <span class="tag">Image Processing</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-badge"></div>
+          <div class="cert-body">
+            <div class="cert-name">Google Data Analytics</div>
+            <div class="cert-issuer">Google</div>
+            <div class="cert-meta">
+              <span class="cert-date">April 2023</span>
+            </div>
+            <a href="assets/Google_Data_Analytics.pdf" class="cert-link" target="_blank"
+              rel="noopener noreferrer">View credential ↗</a>
+            <div class="tags" style="margin-top:.5rem">
+              <span class="tag">Data Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge"></div>
+          <div class="cert-body">
+            <div class="cert-name">SAP Professional Fundamentals</div>
+            <div class="cert-issuer">SAP</div>
+            <div class="cert-meta">
+              <span class="cert-date">May 2026</span>
+            </div>
+            <a href="https://coursera.org/share/24f2d873a9547e1816d31d70a9e3e43e" class="cert-link" target="_blank"
+              rel="noopener noreferrer">View credential ↗</a>
+            <div class="tags" style="margin-top:.5rem">
+              <span class="tag">ERP</span><span class="tag">Project Management</span>
             </div>
           </div>
         </div>
@@ -586,8 +671,14 @@
     </section>
 
   </div>
-  <footer class="footer">
-    <p>© 2025 Phanphum Prathumsuwan · Bangkok, Thailand</p>
+  <footer>
+    <p>© 2026 Phanphum Prathumsuwan · Bangkok, Thailand</p>
+    <p style="margin-top:6px">
+      <a href="https://pphum-prathum.github.io/consulting-portfolio"
+        style="color:var(--ink-faint);font-size:0.75rem;text-decoration:none;">
+        → Also view consulting portfolio
+      </a>
+    </p>
   </footer>
 
   <script src="script.js"></script>
