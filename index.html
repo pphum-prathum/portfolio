@@ -14,7 +14,12 @@
   <nav>
     <div class="nav-inner">
       <span class="nav-name">Phanphum P.</span>
-      <ul class="nav-links">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#summary">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#activity">Activity</a></li>
@@ -80,7 +85,7 @@
             <div class="lang-flag">🇯🇵</div>
             <div class="lang-body">
               <div class="lang-name">Japanese</div>
-              <div class="lang-cert">Beginner</div>
+              <div class="lang-cert">Elementary</div>
               <div class="lang-score">JLPT N5</div>
             </div>
           </div>
@@ -220,13 +225,13 @@
             </div>
             <div class="slides-outer">
               <div class="slides-track" id="track-dormi">
-                <div class="slide"><img src="assets/dormi1.png" alt="DormiSpace App Screen 1"></div>
-                <div class="slide"><img src="assets/dormi2.png" alt="DormiSpace App Screen 2"></div>
-                <div class="slide"><img src="assets/dormi3.png" alt="DormiSpace App Screen 3"></div>
-                <div class="slide"><img src="assets/dormi4.png" alt="DormiSpace App Screen 4"></div>
-                <div class="slide"><img src="assets/dormi5.png" alt="DormiSpace App Screen 5"></div>
-                <div class="slide"><img src="assets/dormi6.png" alt="DormiSpace App Screen 6"></div>
-                <div class="slide"><img src="assets/dormi7.png" alt="DormiSpace App Screen 7"></div>
+                <div class="slide"><img src="assets/dormispace/dormi1.png" alt="DormiSpace App Screen 1"></div>
+                <div class="slide"><img src="assets/dormispace/dormi2.png" alt="DormiSpace App Screen 2"></div>
+                <div class="slide"><img src="assets/dormispace/dormi3.png" alt="DormiSpace App Screen 3"></div>
+                <div class="slide"><img src="assets/dormispace/dormi4.png" alt="DormiSpace App Screen 4"></div>
+                <div class="slide"><img src="assets/dormispace/dormi5.png" alt="DormiSpace App Screen 5"></div>
+                <div class="slide"><img src="assets/dormispace/dormi6.png" alt="DormiSpace App Screen 6"></div>
+                <div class="slide"><img src="assets/dormispace/dormi7.png" alt="DormiSpace App Screen 7"></div>
               </div>
             </div>
             <button class="media-nav media-prev" id="prev-dormi" onclick="slideDir('dormi',-1)"
@@ -498,6 +503,15 @@
               Actions</span><span class="skill-pill">Jenkins</span><span class="skill-pill">Docker</span><span
               class="skill-pill">AWS EC2/S3</span></div>
         </div>
+        <div class="skill-group">
+          <div class="skill-group-title">ERP &amp; SAP</div>
+          <div class="skill-items"><span class="skill-pill">S/4HANA MM (in progress)</span><span class="skill-pill">ABAP</span><span class="skill-pill">SAP Professional Fundamentals</span></div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Methodology</div>
+          <div class="skill-items"><span class="skill-pill">Agile</span><span class="skill-pill">Scrum
+              </span><span class="skill-pill">Requirements Analysis</span><span class="skill-pill">Stakeholder Communication</span></div>
+        </div>
       </div>
     </section>
 
@@ -671,6 +685,7 @@
     </section>
 
   </div>
+  
   <footer>
     <p>© 2026 Phanphum Prathumsuwan · Bangkok, Thailand</p>
     <p style="margin-top:6px">
@@ -681,6 +696,24 @@
     </p>
   </footer>
 
+  <script>
+    // Hamburger nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    // Close menu when any nav link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 

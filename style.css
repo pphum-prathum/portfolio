@@ -75,6 +75,39 @@ nav {
     text-decoration: none
 }
 
+/* ── Hamburger toggle (hidden on desktop) ── */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    color: var(--beige);
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--beige);
+    border-radius: 2px;
+    transition: all .25s;
+}
+
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ── Full-width container ── */
 .container {
     width: 100%;
@@ -1180,6 +1213,70 @@ footer {
         display: inline;
         font-size: 12px;
     }
+
+    /* Activity section timeline collapse too */
+    #activity .exp-timeline {
+        padding-left: 0;
+    }
+}
+
+/* ── Mobile nav (hamburger) ── */
+@media (max-width: 768px) {
+    nav {
+        padding: 0 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 200;
+    }
+
+    .nav-inner {
+        position: relative;
+    }
+
+    /* Show hamburger button */
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Nav links become a dropdown */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 56px;
+        left: -1rem;
+        right: -1rem;
+        background: rgba(10, 51, 35, 0.98);
+        padding: 0.5rem 0 1rem;
+        list-style: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 0.75rem 1.5rem;
+        font-size: 15px;
+        color: #a8c4a0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .nav-links li a:hover {
+        color: var(--beige);
+        background: rgba(255,255,255,0.05);
+        text-decoration: none;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1215,10 +1312,8 @@ footer {
         flex-direction: column;
         gap: .75rem
     }
-}
 
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
+    h1 {
+        font-size: clamp(1.6rem, 7vw, 2.4rem);
+    }
 }

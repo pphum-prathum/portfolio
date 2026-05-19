@@ -31,12 +31,12 @@ function updateDots(id, active) {
 // DormiSpace tab switcher
 var dormiImages = {
   app: [
-    'assets/dormi1.png','assets/dormi2.png','assets/dormi3.png',
-    'assets/dormi4.png','assets/dormi5.png','assets/dormi6.png',
-    'assets/dormi7.png','assets/dormi8.png'
+    'assets/dormispace/dormi1.png','assets/dormispace/dormi2.png','assets/dormispace/dormi3.png',
+    'assets/dormispace/dormi4.png','assets/dormispace/dormi5.png','assets/dormispace/dormi6.png',
+    'assets/dormispace/dormi7.png','assets/dormispace/dormi8.png'
   ],
-  func: ['assets/func.jpg'],
-  erd: ['assets/erd.jpg']
+  func: ['assets/dormispace/func.jpg'],
+  erd: ['assets/dormispace/erd.jpg']
 };
 var dormiCurrentTab = 'app';
 
