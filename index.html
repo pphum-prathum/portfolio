@@ -240,7 +240,7 @@
           <div class="proj-media app-media" id="media-dormi" style="display:flex;flex-direction:column">
             <div class="media-tab-bar">
               <button class="media-tab active" onclick="switchDormiTab('app',this)">App Screens</button>
-              <button class="media-tab" onclick="switchDormiTab('func',this)">Architecture</button>
+              <button class="media-tab" onclick="switchDormiTab('func',this)">Functional Decomposition Diagram</button>
               <button class="media-tab" onclick="switchDormiTab('erd',this)">Database ERD</button>
               <button class="media-tab" onclick="window.open('https://youtu.be/wn1L1ZACNqs','_blank')">Demo ↗</button>
             </div>
@@ -457,6 +457,43 @@
           </div>
         </div>
 
+        <!-- MOVIE SEARCH APP -->
+        <div class="proj-card">
+          <div class="proj-media app-media">
+            <img src="assets/apppreview.png" alt="Movie Search App screenshot"
+              style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="proj-body">
+            <div class="proj-header">
+              <div class="proj-header-left">
+                <div class="proj-icon">🎬</div>
+                <div>
+                  <div class="proj-name">Movie Search App</div>
+                  <div class="proj-type">Full-Stack &middot; Flask + Elasticsearch</div>
+                </div>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/pphum-prathum/searchproject" class="proj-link pl-github" target="_blank"
+                  rel="noopener noreferrer">GitHub ↗</a>
+              </div>
+            </div>
+            <p class="proj-desc">A full-text movie search engine built with Flask and Elasticsearch. Supports fuzzy
+              matching,
+              multi-field search across titles, directors, actors, and plots, with relevance ranking and sorting by
+              rating
+              or release date.</p>
+            <div class="proj-highlights">
+              <div class="proj-highlight">Fuzzy full-text search across title, director, actor, and plot fields</div>
+              <div class="proj-highlight">Relevance ranking with boost weights and phrase matching</div>
+              <div class="proj-highlight">Sort by relevance, IMDb rating, or release date</div>
+            </div>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Elasticsearch</span><span
+                class="tag">Full-Stack</span>
+            </div>
+          </div>
+        </div>
+
         <!-- ONLINE TUTOR -->
         <div class="proj-card">
           <div class="proj-media app-media">
@@ -511,7 +548,8 @@
           <div class="skill-group-title">Backend &amp; API</div>
           <div class="skill-items">
             <span class="skill-pill">Spring Boot</span><span class="skill-pill">RESTful API</span><span
-              class="skill-pill">System Integration</span>
+              class="skill-pill">System Integration</span><span class="skill-pill">Flask</span><span
+              class="skill-pill">Elasticsearch</span>
           </div>
         </div>
         <div class="skill-group">
