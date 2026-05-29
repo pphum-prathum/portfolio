@@ -140,17 +140,19 @@ nav {
 
 /* ── HERO ── */
 .hero {
+    position: relative;
+    overflow: visible;
     padding: 0;
     border-bottom: 2px solid var(--moss);
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr 520px; /* wider photo column */
     align-items: stretch;
-    min-height: 520px;
+    min-height: 750px; 
     overflow: hidden
 }
 
 .hero-text {
-    padding: 5rem 3rem 4rem;
+    padding: 6rem 3rem 5rem; /* more vertical breathing room */
     display: flex;
     flex-direction: column;
     justify-content: center
@@ -161,12 +163,12 @@ nav {
     align-items: center;
     justify-content: center;
     background: transparent;
-    padding: 3rem 2rem
+    padding: 3rem 2.5rem
 }
 
 .hero-photo-wrap img {
-    width: 320px;
-    height: 380px;
+    width: 400px;  /* up from 320px */
+    height: 460px; /* up from 380px */
     object-fit: cover;
     object-position: center top;
     display: block;
@@ -197,7 +199,7 @@ nav {
 }
 
 h1 {
-    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
     font-weight: 800;
     letter-spacing: -.02em;
     line-height: 1.15;
@@ -284,6 +286,39 @@ h2 {
     font-weight: 800;
     margin-bottom: 2rem;
     color: var(--dark-green)
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.4;
+    animation: fadeInScroll 1s ease 1s both
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid var(--dark-green);
+    border-bottom: 2px solid var(--dark-green);
+    transform: rotate(45deg);
+    animation: bounceDown 1.2s ease-in-out infinite
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: rotate(45deg) translateY(0) }
+    50%       { transform: rotate(45deg) translateY(5px) }
+}
+
+@keyframes fadeInScroll {
+    from { opacity: 0 }
+    to   { opacity: 0.4 }
 }
 
 /* ── ABOUT ── */
@@ -1101,10 +1136,6 @@ footer a:hover {
         padding: 0 1.5rem
     }
 
-    section {
-        padding: 3rem 1.5rem
-    }
-
     .hero {
         grid-template-columns: 1fr;
         min-height: unset
@@ -1115,12 +1146,23 @@ footer a:hover {
     }
 
     .hero-photo-wrap {
-        height: 340px
+        height: 420px; /* fixed height instead of letting it grow huge */
+        padding: 0 2rem 2rem;
+        overflow: hidden
+    }
+
+    .hero-photo-wrap img {
+        width: 280px;  /* smaller on mobile */
+        height: 320px;
+        object-fit: cover;
+        object-position: center top
     }
 
     .hero-photo-wrap::after {
         background: linear-gradient(to bottom, var(--bg) 0%, transparent 18%)
     }
+
+    .scroll-indicator { display: none }
 
     .about-grid {
         grid-template-columns: 1fr;
